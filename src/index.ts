@@ -1,11 +1,16 @@
-interface User {
-  name: string;
-  age: number;
-  password: string;
-}
+//read only
 
-type UpdateProps = Pick<User, "age" | "name" | "password">; //pick from user
+type User = {
+  readonly name: string;
+  readonly age: number;
+  readonly password: string;
+};
 
-function updateUser(updatedProps: UpdateProps) {
-  console.log(updatedProps);
-}
+const user: User = {
+  name: "foo",
+  age: 10,
+  password: "12345",
+};
+
+user.name = "bar";
+console.log(user);

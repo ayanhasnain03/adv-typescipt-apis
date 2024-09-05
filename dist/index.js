@@ -1,6 +1,19 @@
 "use strict";
-function sumOfAge(user1, user2) {
-    return user1.age + user2.age;
-}
-const result = sumOfAge({ name: "foo", age: 10 }, { name: "bar", age: 20 });
-console.log(result);
+//read only
+const arrayOfUsers = [
+    {
+        name: "foo",
+        age: 10,
+        password: "12345",
+    },
+    {
+        name: "bar",
+        age: 20,
+        password: "12345",
+    },
+];
+arrayOfUsers.forEach((user) => {
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.password);
+});
